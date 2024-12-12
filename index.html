@@ -115,15 +115,15 @@
         let phone = document.getElementById('tel').value;
 
         if (name.length < 5){
-            document.getElementById('error').innerText = 'Name length must be over 5 symbols';
+            document.getElementById('error').innerText = "Something is wrong with name";
             return;
         }
         if (email.length < 5){
-            document.getElementById('error').innerText = 'Email length must be over 5 symbols';
+            document.getElementById('error').innerText = "Something is wrong with email";
             return;
         }
         if (phone.length < 5){
-            document.getElementById('error').innerText = 'Phone length must be over 5 symbols';
+            document.getElementById('error').innerText = "Something is wrong with phone";
             return;
         }
 
@@ -133,7 +133,7 @@
             'phone': phone
         }
 
-        tg.sendData(JSON.stringify(data))
+        tg.sendData(JSON.stringify(data));
        tg.close(); 
     });
 </script>
