@@ -4,46 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content= "ie-edge">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
     <title>Webpage</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-        *{
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        body{
+        body {
             font-family: 'Monserrat', sans-serif;
             font-weight: 200;
             color: var(--tg-theme-text-color);
             background: var(--tg-theme-bg-color);
         }
 
-        #main{
+        #main {
             width: 100%;
             padding: 20px;
             text-align: center;
         }
 
-        h1{
+        h1 {
             margin-top: 50px;
             margin-bottom: 10px;
         }
 
-        img{
+        img {
             width: 70px;
             margin: 30px auto;
         }
 
-        p{
+        p {
             width: 350px;
             margin: 0 auto;
         }
 
-        button{
+        button {
             border: 0;
             border-radius: 5px;
             margin-top: 50px;
@@ -57,16 +57,16 @@
             background: var(--tg-theme-button-bg-color);
         }
 
-        button:hover{
+        button:hover {
             background-color: var(--tg-theme-secondary-bg-color);
         }
 
-        #form{
+        #form {
             display: none;
             text-align: center;
         }
 
-        input{
+        input {
             width: 90px;
             outline: none;
             margin: 10px 5%;
@@ -76,35 +76,35 @@
             border-radius: 5px;
         }
 
-        input:focus{
+        input:focus {
             border-color: #db5d5d;
         }
     </style>
 </head>
 <body>
-    <div id="main">
-        <h1>Online web-shop</h1>
-        <img src="https://cdn-icons-png.flaticon.com/512/3595/3595455.png" alt="">
-        <p>Lorem ipsum dolor sit amet, consectetur.</p>
-        <button id="buy">Buy</button>
-    </div>
-    <form id="form">
-        <input id="name" type="text" placeholder="Name" >
-        <input id="email" type="email" placeholder="example@example.com">
-        <input id="phone" type="tel" placeholder="xxx-xxx-xx-xx">
-        <button id="order">Submit</button>
-    </form>
-    <script src="https://telegram.org/js/telegram-web-app.js?56"></script>
-    <script>
-        let tg = window.Telegram.WebApp;
-        let buy = document.getElementById('buy');
-        let order = document.getElementById('order');
+<div id="main">
+    <h1>Online web-shop</h1>
+    <img src="https://cdn-icons-png.flaticon.com/512/3595/3595455.png" alt="">
+    <p>Lorem ipsum dolor sit amet, consectetur.</p>
+    <button id="buy">Buy</button>
+</div>
+<form id="form">
+    <input id="name" type="text" placeholder="Name">
+    <input id="email" type="text" placeholder="example@example.com">
+    <input id="tel" type="text" placeholder="xxx-xxx-xx-xx">
+    <button id="order">Submit</button>
+</form>
+<script src="https://telegram.org/js/telegram-web-app.js?56"></script>
+<script>
+    let tg = window.Telegram.WebApp;
+    let buy = document.getElementById('buy');
+    let order = document.getElementById('order');
 
-        buy.addEventListener('click', ()=>{
-            document.getElementById('main').style.display = 'none';
-            document.getElementById('form').style.display = 'block';
-            document.getElementById('name').value = tg.initData;
-        });
-    </script>
+    buy.addEventListener('click', () => {
+        document.getElementById('main').style.display = 'none';
+        document.getElementById('form').style.display = 'block';
+        document.getElementById('name').value = tg.initDataUnsafe.user.first_name + '' + tg.initDataUnsafe.user.last_name;
+    });
+</script>
 </body>
 </html>
