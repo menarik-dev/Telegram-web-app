@@ -91,7 +91,7 @@
 <form id="form">
     <input id="name" type="text" placeholder="Name" value="">
     <input id="email" type="text" placeholder="example@example.com" value="">
-    <input id="tel" type="text" placeholder="xxx-xxx-xx-xx" value="">
+    <input id="phone" type="text" placeholder="xxx-xxx-xx-xx" value="">
     <button id="order">Submit</button>
 </form>
 <script src="https://telegram.org/js/telegram-web-app.js?56"></script>
@@ -99,7 +99,7 @@
     let tg = window.Telegram.WebApp;
     let buy = document.getElementById('buy');
     let order = document.getElementById('order');
-    tg.expand();
+    tg.exp();
 
     buy.addEventListener('click', () => {
         document.getElementById('main').style.display = 'none';
@@ -111,9 +111,8 @@
         document.getElementById('error').innerText = '';
 
         let name = document.getElementById('name').value;
-        console.log(name);
         let email = document.getElementById('email').value;
-        let phone = document.getElementById('tel').value;
+        let phone = document.getElementById('phone').value;
 
         if (name.length < 5){
             document.getElementById('error').innerText = "Something is wrong with name";
@@ -133,9 +132,8 @@
             'email': email,
             'phone': phone
         }
-
         tg.sendData(JSON.stringify(data));
-       tg.clone(); 
+       tg.close(); 
     });
 </script>
 </body>
