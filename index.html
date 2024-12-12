@@ -105,6 +105,10 @@
         document.getElementById('form').style.display = 'block';
         document.getElementById('name').value = tg.initDataUnsafe.user.first_name + '' + tg.initDataUnsafe.user.last_name;
     });
+
+    order.addEventListener('click', ()=>{
+       tg.close(); 
+    });
 </script>
 </body>
 </html>
