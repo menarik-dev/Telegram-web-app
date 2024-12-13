@@ -18,14 +18,17 @@
 
         if (name.length < 5){
             document.getElementById('error').innerText = "Something is wrong with name";
+            document.getElementById('error').style.color = "red";
             return;
         }
         if (email.length < 5){
-            document.getElementById('error').innerText = "Something is wrong with email";
+            document.getElementById('error').innerText = "Something is wrong with email"
+            document.getElementById('error').style.color = "red";
             return;
         }
         if (phone.length < 5){
-            document.getElementById('error').innerText = "Something is wrong with phone";
+            document.getElementById('error').innerText = "Something is wrong with phone"
+            document.getElementById('error').style.color = "red";
             return;
         }
 
