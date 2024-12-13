@@ -6,7 +6,7 @@
     buy.addEventListener('click', () => {
         document.getElementById('main').style.display = 'none';
         document.getElementById('form').style.display = 'block';
-        document.getElementById('name').value = tg.initDataUnsafe.user.first_name + '' + tg.initDataUnsafe.user.last_name;
+        // document.getElementById('name').value = tg.initDataUnsafe.user.first_name + '' + tg.initDataUnsafe.user.last_name;
     });
 
     order.addEventListener('click', ()=>{
