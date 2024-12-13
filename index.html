@@ -5,8 +5,8 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <link rel="stylesheet" href="style.css">
     <title>Webpage</title>
-    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 <div id="main">
@@ -16,12 +16,13 @@
     <button id="buy">Buy</button>
 </div>
 <form id="form">
-    <input id="name" type="text" placeholder="Name" value="">
-    <input id="email" type="text" placeholder="example@example.com" value="">
-    <input id="phone" type="text" placeholder="xxx-xxx-xx-xx" value="">
+    <input type="text" id="name" placeholder="Name">
+    <input type="text" id="email"  placeholder="example@example.com">
+    <input type="text" id="phone"  placeholder="xxx-xxx-xx-xx">
+    <div id="error"></div>
     <button id="order">Submit</button>
 </form>
 <script src="https://telegram.org/js/telegram-web-app.js?56"></script>
-    <script src="./main.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
